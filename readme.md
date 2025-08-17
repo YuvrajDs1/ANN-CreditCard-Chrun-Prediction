@@ -17,32 +17,38 @@ NumOfProducts
 HasCrCard
 IsActiveMember
 EstimatedSalary
+
 Target variable: Exited (0 = Stayed, 1 = Churned)
 
 📊 Preprocessing Steps
 Drop Irrelevant Columns: RowNumber, CustomerId, Surname
+
 Label Encoding: Gender
+
 One-Hot Encoding: Geography
+
 Feature Scaling: Standardization of numerical features using StandardScaler
 
 🧠 Model Architecture
 A simple feedforward neural network built with Keras:
-Input Layer: 12 features
-Hidden Layer 1: Dense(8, activation='relu')
-Hidden Layer 2: Dense(8, activation='relu')
+Input Layer: 12 features,
+Hidden Layer 1: Dense(8, activation='relu'),
+Hidden Layer 2: Dense(8, activation='relu'),
 Output Layer: Dense(1, activation='sigmoid')
 
-Optimizer: Adam
-Loss Function: Binary Crossentropy
-Metrics: Accuracy
+Optimizer: Adam,
+Loss Function: Binary Crossentropy,
+Metrics: Accuracy,
 Callback: EarlyStopping with patience=5 to prevent overfitting
 
 🔍 Model Evaluation
 Training and validation accuracy and loss are plotted for visual inspection.
+
 Final predictions are thresholded at 0.5 to convert probabilities into binary class predictions (0 or 1).
+
 📈 Visualizations
 The training process includes plots for:
-Training Loss
-Validation Loss
-Training Accuracy
-Validation Accuracy
+Training Loss,
+Validation Loss,
+Training Accuracy,
+Validation Accuracy,
